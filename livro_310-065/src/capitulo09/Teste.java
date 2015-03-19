@@ -14,7 +14,7 @@ public class Teste implements Runnable {
 	 */
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		System.out.println("Minha Thread "+Thread.currentThread().getName());
 
 	}
 
@@ -25,7 +25,19 @@ public class Teste implements Runnable {
 	 * void
 	 */
 	public static void main(String[] args) {
-		//Commit github
+		System.out.println(Thread.currentThread().getName());
+		
+		Teste r = new Teste();
+		Teste x = new Teste();
+		Thread t1 = new Thread(r, "T1");
+		Thread t2 = new Thread(x, "T2");
+		t1.start();
+		System.out.println(t1.getName());
+		t2.start();
+		System.out.println(t2.getName());
+		
+		//System.out.println(t1.getName());
+		//System.out.println(Thread.currentThread().getName());
 
 	}
 
