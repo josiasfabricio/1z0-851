@@ -25,7 +25,7 @@ public class Teste implements Runnable {
 	 * void
 	 */
 	public static void main(String[] args) {
-
+		//Commit github
 
 	}
 
