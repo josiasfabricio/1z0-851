@@ -17,7 +17,7 @@ package capitulo09;
 	G. Exactly three might produce the output 4 2
 	 
  */
-public class Starter implements Runnable {
+public class Ex13Starter implements Runnable {
 
 	void go(long id) {
 		System.out.println(id+ " * ");
@@ -37,10 +37,10 @@ public class Starter implements Runnable {
 	
 	public static void main(String[] args) {
 		System.out.print(Thread.currentThread().getId() + " ^ ");
-		new Starter().run();
-		new Thread(new Starter());
-		new Thread(new Starter()).run();
-		new Thread(new Starter()).start();
+		new Ex13Starter().run();
+		new Thread(new Ex13Starter());
+		new Thread(new Ex13Starter()).run();
+		new Thread(new Ex13Starter()).start();
 	}
 
 }

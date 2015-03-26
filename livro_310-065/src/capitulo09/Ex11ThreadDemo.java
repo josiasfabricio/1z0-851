@@ -5,9 +5,18 @@
 package capitulo09;
 
 /**
- * @author jfsilva 25/03/2015
+ * Which of the following pairs of method invocations could NEVER be executing at the same time?
+(Choose all that apply.)
+	A. x.a() in thread1, and x.a() in thread2
+	B. x.a() in thread1, and x.b() in thread2
+	C. x.a() in thread1, and y.a() in thread2
+	D. x.a() in thread1, and y.b() in thread2
+	E. x.b() in thread1, and x.a() in thread2
+	F. x.b() in thread1, and x.b() in thread2
+	G. x.b() in thread1, and y.a() in thread2
+	H. x.b() in thread1, and y.b() in thread25
  */
-public class ThreadDemo {
+public class Ex11ThreadDemo {
 
 	synchronized void a() {
 		actBusy();
@@ -25,8 +34,8 @@ public class ThreadDemo {
 	}
 
 	public static void main(String[] args) {
-		final ThreadDemo x = new ThreadDemo();
-		final ThreadDemo y = new ThreadDemo();
+		final Ex11ThreadDemo x = new Ex11ThreadDemo();
+		final Ex11ThreadDemo y = new Ex11ThreadDemo();
 		Runnable runnable = new Runnable() {
 			public void run() {
 				int option = (int) (Math.random() * 4);

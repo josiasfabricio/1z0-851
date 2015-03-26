@@ -7,7 +7,7 @@ package capitulo09;
 /**
  * @author jfsilva 25/03/2015
  */
-public class TwoThreads {
+public class Ex12TwoThreads {
 	static Thread laurel, hardy;
 
 	public static void main(String[] args) {
